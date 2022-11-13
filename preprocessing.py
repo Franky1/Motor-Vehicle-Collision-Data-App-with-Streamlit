@@ -1,12 +1,13 @@
 import logging
-import warnings
 
 import numpy as np
 import pandas as pd
-from pandas.core.common import SettingWithCopyWarning
 
 # FIXME: check the reason for this warning and rewrite the code to remove it?
-warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
+# FIXME: SettingWithCopyWarning seems to be removed from pandas since pandas version 1.5.x
+# import warnings
+# from pandas.core.common import SettingWithCopyWarning
+# warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
 logformat = '%(levelname)s:%(module)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=logformat)
