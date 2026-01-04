@@ -7,8 +7,8 @@ on:
   # cron runs weekly at 07:13 UTC time on every Sunday
   # this coresponds to 03:13 NYC time
   # because we want to hit the NYC OpenData server at low traffic times
-  schedule:
-    - cron: '13 7 * * SUN'
+  # schedule:
+  #  - cron: '13 7 * * SUN'
   # manually trigger the workflow from the github UI
   workflow_dispatch:
 
@@ -30,3 +30,4 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REF: ${{ github.ref }}
           GITHUB_BRANCH: ${{ github.ref_name }}
+
